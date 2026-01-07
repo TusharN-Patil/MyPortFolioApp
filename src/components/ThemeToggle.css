@@ -1,0 +1,41 @@
+.theme-toggle {
+  position: static;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.theme-toggle:hover::before {
+  opacity: 0.2;
+}
+
+.theme-toggle-inner {
+  position: relative;
+  z-index: 1;
+  color: currentColor;
+}
+
+.theme-toggle-glow { display: none; }
+
+/* Size tweak for very small screens if used inline */
+@media (max-width: 480px) {
+  .theme-toggle { width: 34px; height: 34px; }
+}
+

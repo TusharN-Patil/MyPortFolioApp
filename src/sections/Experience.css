@@ -1,0 +1,113 @@
+.experience {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.experience-content {
+  position: relative;
+  z-index: 1;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-item {
+  padding: 2.5rem;
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(79, 172, 254, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.experience-item:hover::before {
+  opacity: 1;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.experience-role {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.experience-company {
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.experience-location {
+  font-size: 1rem;
+}
+
+.experience-period {
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.experience-contributions {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.experience-contributions li {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.experience-contributions li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #00cc88;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 4rem 0;
+  }
+  
+  .experience-header {
+    flex-direction: column;
+  }
+  
+  .experience-period {
+    align-self: flex-start;
+  }
+  
+  .experience-item {
+    padding: 1.5rem;
+  }
+}
+
